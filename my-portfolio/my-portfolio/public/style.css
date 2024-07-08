@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* General styles */
+.hero-header, .blog {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #222;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.logo .logo-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+nav .togglebtn {
+    display: none;
+}
+
+nav .navlinks {
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.container .hero-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #444;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h5 {
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: #007ced;
+    font-size: 16px;
+}
+
+.hero-text h1 {
+    color: #007ced;
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    color: #e5e5e5;
+}
+
+.btn-group {
+    margin: 1.5rem 0;
+}
+
+.btn-group .btn {
+    border: 2px solid #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 30px;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78);
+}
+
+.btn.active {
+    border-color: #007ced;
+}
+
+.social i {
+    color: #e5e5e5;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.social i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+}
+
+/* Responsive design */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: initial;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav .navlinks {
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+        padding: 25px 0;
+    }
+
+    nav .navlinks li {
+        display: block;
+    }
+
+    nav .navlinks li a {
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 20px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .container .hero-pic {
+        width: 150px;
+        height: 150px;
+        border-width: 8px;
+    }
+
+    .btn-group .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .logo i {
+        height: 40px;
+        width: 40px;
+        font-size: 1.3rem;
+    }
+
+    .logo .logo-text {
+        font-size: 20px;
+    }
+
+    nav .navlinks li {
+        margin-right: 1rem;
+    }
+
+    .container {
+        padding-top: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .container .hero-pic {
+        width: 120px;
+        height: 120px;
+        border-width: 6px;
+    }
+
+    .btn-group .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
